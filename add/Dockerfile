@@ -1,7 +1,7 @@
 FROM almalinux:9
 RUN dnf install nginx -y && dnf clean all
 RUN rm -rf /usr/share/nginx/html/index.html
-ADD  https://raw.githubusercontent.com/Kavyas099/dockerfiles/refs/heads/main/add/Dockerfile  /usr/share/nginx/html/index.html
+ADD  https://raw.githubusercontent.com/Kavyas099/dockerfiles/refs/heads/main/cmd/Dockerfile  /usr/share/nginx/html/index.html
 
 RUN chmod +r /usr/share/nginx/html/index.html
 CMD ["nginx", "-g", "daemon off;"]
